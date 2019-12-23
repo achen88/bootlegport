@@ -4,6 +4,13 @@ VENV_NAME?=venv
 PYTHON=${VENV_NAME}/bin/python3
 .RECIPEPREFIX +=
 
+ifneq ($(LIST),)
+ARGS += -f $(LIST)
+endif
+ifneq ($(DEST),)
+ARGS += -d $(DEST)
+endif
+
 .DEFAULT: help
 help:
     @echo "make install"
@@ -39,7 +46,7 @@ lint: venv
     ${PYTHON} -m pylint
 
 shell: venv
-    ${PYTHON} -m shell $(LIST)
+    ${PYTHON} -m shell $(ARGS)
 
 clean:
     rm -rf out

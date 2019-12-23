@@ -2,7 +2,7 @@
 it's yet another Youtube -> mp3 converter
 
 ## Dependencies
-- make >= 3.82 (optional)
+- make >= 3.82 
 - python3
 - ffmpeg
 
@@ -22,11 +22,11 @@ it's yet another Youtube -> mp3 converter
 |Install python dependencies|`pip3 install -r requirements.txt`| 
 |Run test script|`python3 test.py`|
 |Run interactive downloader|`python3 shell.py`|
-|Run downloader on list of urls|`python3 shell.py [filename]`|
+|Run downloader on list of urls|`python3 shell.py -f [filename]`|
 
 Replace `pip3` and `python3` as necessary.
 
-Mp3s go to `./out`
+Include `DEST=[directory]` (or `-d [directory]` for `make`-less), to specify a target directory for mp3s. Defaults to  `./out/`.
 
 ## Demo
 ### `make shell`
