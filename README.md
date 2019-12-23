@@ -14,6 +14,7 @@ it's yet another Youtube -> mp3 converter
 |Run test script|`make test`|
 |Run interactive downloader|`make shell`|
 |Run downloader on list of urls|`make shell LIST=[filename]`|
+|Specify target directory|`make shell DEST=[directory]`|
 |Delete garbage|`make clean`|
 
 ### `make`-less
@@ -23,10 +24,9 @@ it's yet another Youtube -> mp3 converter
 |Run test script|`python3 test.py`|
 |Run interactive downloader|`python3 shell.py`|
 |Run downloader on list of urls|`python3 shell.py -f [filename]`|
+|Specify target directory|`python3 shell.py -d [directory]`|
 
-Replace `pip3` and `python3` as necessary.
-
-Include `DEST=[directory]` (or `-d [directory]` for `make`-less), to specify a target directory for mp3s. Defaults to  `./out/`.
+Replace `pip3` and `python3` as necessary. Target directory defaults to `./out/`.
 
 ## Demo
 ### `make shell`
