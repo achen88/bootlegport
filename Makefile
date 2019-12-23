@@ -4,10 +4,10 @@ VENV_NAME?=venv
 PYTHON=${VENV_NAME}/bin/python3
 .RECIPEPREFIX +=
 
-ifneq ($(LIST),)
+ifdef LIST
 ARGS += -f $(LIST)
 endif
-ifneq ($(DEST),)
+ifdef DEST
 ARGS += -d $(DEST)
 endif
 
