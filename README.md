@@ -2,7 +2,7 @@
 it's yet another Youtube -> mp3 converter
 
 ## Dependencies
-- make >= 3.82 
+- make >= 3.82 (optional)
 - python3
 - ffmpeg
 
