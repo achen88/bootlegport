@@ -6,7 +6,7 @@ import os
 def valid_dir(path): 
     if not os.path.isdir(path):
         raise argparse.ArgumentTypeError('{} is not an existing directory'.format(path))
-    if path[-1] != '/': path += '/'
+    if not path.endswith(os.sep): path += os.sep
     return path
 
 parser = argparse.ArgumentParser()
